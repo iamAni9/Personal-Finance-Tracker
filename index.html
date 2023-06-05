@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div class="container">
+        <div class="upper-section"> 
+            <span class="material-symbols-outlined">
+                account_balance
+                </span>  
+            <h3>Personal Finance Tracker</h3>
+        </div>
+        <div class="lower-section">
+            <div class="balance">
+                <h5>Your Balance</h5>
+                <div class="amount">   
+                    <h4 class="rupee-symbol">₹</h4>
+                    <h4 class="account-balance">0</h4>
+                </div>
+            </div>
+            <div class="slider-section">
+                <div class="slider">
+                    <div class="card" id="first-card">
+                        <div id="saving">
+                            <span class="material-symbols-outlined">
+                                savings
+                                </span>
+                            <h4>SAVINGS</h4>
+                            <p id="saving-amount">₹0</p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-outlined">
+                                shopping_cart
+                                </span>
+                            <h4>EXPENSE</h4>
+                            <p id="expense-amount">₹0</p>
+                        </div>
+                    </div>
+                    <div class="card" id="second-card">
+                        <canvas id="my-chart"></canvas>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="btn_l"></button>
+                    <button id="btn_r"></button>
+                </div>
+            </div>
+            <div class="add-transaction">
+                <h4 class="text">Add Transaction</h4>
+                <div class="line"></div>
+                <select name="slide" id="select-box">
+                    <option value="savings">Savings</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <div class="entry">
+                    <h4>Name</h4>
+                    <input type="text" id="text-input">
+                </div>
+                <div class="entry">
+                    <h4>Amount</h4>
+                    <input type="text" id="amount-input">
+                </div>
+                <button id="add-button">ADD</button>
+            </div>
+            <div class="history">
+                <h4 class="text">History</h4>
+                <div class="line"></div>
+                <!-- <div class="plus" id="trans">
+                    <span>
+                        <button onclick="removeTransaction(transaction.id)">X</button>
+                    </span>
+                    <span>
+                        <h4 class="text">Salary</h4>
+                        <h4 class="amount">+ ₹1000</h4>
+                    </span>
+                </div>
+                <div class="minus" id="trans">
+                    <span>
+                        <button onclick="removeTransaction(transaction.id)">X</button>
+                    </span>
+                    <span>
+                        <h4 class="text">Fruits</h4>
+                        <h4 class="amount">- ₹40</h4>
+                    </span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
