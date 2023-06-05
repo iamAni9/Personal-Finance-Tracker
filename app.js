@@ -7,6 +7,7 @@ const addBtn = document.getElementById("add-button")
 // localStorage.clear()
 
 let max_value = 1000
+let min_value = 0
 
 const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
 let transactions = localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
@@ -201,6 +202,7 @@ updateValues()
 
 function createGraph(){
     max_value = Math.max(...yValues);
+    min_value = Math.min(...yValues);
     new Chart("my-chart", {
         type: "line",
         data: {
@@ -217,7 +219,7 @@ function createGraph(){
           legend: {display: false},
         //   events: ['click'],
           scales: {
-            yAxes: [{ticks: {min: 0, max:max_value}}],
+            yAxes: [{ticks: {min: min_value, max:max_value}}],
           }
         }
       });
